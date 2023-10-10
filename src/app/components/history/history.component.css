@@ -1,0 +1,9 @@
+[name=setCenter] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  margin-right: 100px;
+  margin-left: 100px;
+}

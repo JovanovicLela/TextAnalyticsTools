@@ -1,0 +1,49 @@
+<div class="mt-lg-3">
+  <h2> Entity Extraction </h2>
+  <div>
+    <form (submit)="submitEntityExtraction()" class="mb-5">
+      <div class="form-group mb-2">
+        <textarea type="text" class="form-control" id="token" name="token" placeholder="Enter text" [(ngModel)]="inputText"></textarea>
+      </div>
+    <br>
+    <div class="mt-lg-3">
+      <h5> Minimum confidence level: {{ min_confidence }} </h5>
+      <input type="range" name="minConfidence" [(ngModel)]="min_confidence" id="min_confidence" class="range" max="1" step="0.1" min="0" required="">
+    </div>
+    <br>
+
+      <div class="cellContainer">
+        <input type="checkbox" id="image" name="image" [(ngModel)]="isImage">
+        <label for="image"> Image </label>
+      </div>
+      <div class="cellContainer">
+        <input type="checkbox" id="abstract" name="abstract" [(ngModel)]="isAbstract">
+        <label for="abstract"> Abstract </label>
+      </div>
+
+      <div class="cellContainer">
+        <input type="checkbox" id="category" name="category" [(ngModel)]="isCategories">
+        <label for="category"> Category </label>
+      </div>
+
+    <br><br><br>
+    <button type="submit" class="btn btn-primary">Extract Entities</button>
+    </form>
+
+    <div *ngFor="let annotation of annotations; let i = index;" class="mb-lg-5">
+      <h3> Entity </h3>
+      <h5> {{ i+1 }}) {{ annotation.title }} </h5>
+      <h3> Abstract </h3>
+      <p> {{ annotation.abstract }} </p>
+      <h3> Categories </h3>
+      <div *ngFor="let c of annotation.categories; let i = index;" class="mb-2">
+        <h5> {{ c }} </h5>
+      </div>
+      <h3> Image </h3>
+      <img class="images" src="{{ annotation.image.thumbnail }}" alt=""/>
+      <br><br><br><br><br>
+    </div>
+    <br>
+
+  </div>
+</div>

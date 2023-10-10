@@ -1,0 +1,28 @@
+<div class="mt-lg-3">
+  <h2> Language Detection </h2>
+  <div>
+    <form (submit)="submitLanguageDetection()" class="mb-5"  name="setCenter">
+      <div class="cellContainer">
+        <textarea id="ta1" name="ta1" type="text" placeholder="Enter text" rows="5" cols="85" [(ngModel)]="text"></textarea>
+        <br><br>
+        <div name="setCenter">
+          <button type="submit" class="btn btn-primary"> Detect language </button>
+        </div>
+      </div>
+    </form>
+    <section name="setCenter">
+      <div class="cellContainer">
+        <input type="checkbox" id="cbClean" name="cbClean" [(ngModel)]="clean">
+        <label for="cbClean"> Clean </label>
+      </div>
+    </section>
+    <br><br>
+    <div name="setCenter">
+      <h5> Language: {{ language }} </h5>
+    </div>
+    <div name="setCenter">
+      <h5> Confidence: {{ confidence }} </h5>
+    </div>
+
+  </div>
+</div>

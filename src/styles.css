@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr.css';
 @import "~bootstrap/dist/css/bootstrap.css";
+h2 {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+

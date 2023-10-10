@@ -1,0 +1,14 @@
+.cellContainer {
+  display: block;
+  justify-content: space-between;
+  padding: 5px;
+  float: left;
+}
+.container {
+  display: flex;
+  float: left;
+}
+
+h5 {
+  margin-top: 50px;
+}

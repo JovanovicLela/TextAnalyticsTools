@@ -1,27 +1,45 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
-import {PostListComponent} from "./components/post-list/post-list.component";
-import {SinglePostComponent} from "./components/single-post/single-post.component";
 import {ConfigurationComponent} from "./components/configuration/configuration.component";
+import {AuthGuard} from "./auth.guard";
+import {EntityExtractionComponent} from "./components/entity-extraction/entity-extraction.component";
+import {TextSimilarityComponent} from "./components/text-similarity/text-similarity.component";
+import {LanguageDetectionComponent} from "./components/language-detection/language-detection.component";
+import {SentimentAnalysisComponent} from "./components/sentiment-analysis/sentiment-analysis.component";
+import {HistoryComponent} from "./components/history/history.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "configuration",
     component: ConfigurationComponent
   },
   {
-    path: "posts",
-    component: PostListComponent,
+    path: "entity-extraction",
+    component: EntityExtractionComponent
   },
   {
-    path: "posts/:id",
-    component: SinglePostComponent,
+    path: "text-similarity",
+    component: TextSimilarityComponent
   },
+  {
+    path: "language-detection",
+    component: LanguageDetectionComponent
+  },
+  {
+    path: "sentiment-analysis",
+    component: SentimentAnalysisComponent
+  },
+  {
+    path: "history",
+    component: HistoryComponent
+  },
+
 ];
 
 @NgModule({

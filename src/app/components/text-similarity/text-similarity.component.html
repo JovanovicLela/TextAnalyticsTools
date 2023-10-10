@@ -1,0 +1,18 @@
+<div class="mt-lg-3">
+  <h2> Text Similarity </h2>
+  <div>
+    <form (submit)="submitTextSimilarity()" class="mb-5">
+      <div class="cellContainer">
+        <textarea id="ta1" name="ta1" placeholder="Enter text" rows="6" cols="79" [(ngModel)]="text1"></textarea>
+      </div>
+      <div class="cellContainer">
+        <textarea id="ta2" name="ta2" placeholder="Enter text" rows="6" cols="79" [(ngModel)]="text2"></textarea>
+      </div>
+      <div class="cellContainer">
+        <br><br>
+        <button type="submit" class="btn btn-primary"> Find text similarity </button>
+        <h5 id="similarity"> Similarity: {{ similarity }}</h5>
+      </div>
+    </form>
+  </div>
+</div>

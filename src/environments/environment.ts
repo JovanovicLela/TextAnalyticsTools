@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  postApi: 'https://jsonplaceholder.typicode.com'
+  postApi: 'https://api.dandelion.eu/datatxt/'
 };
 
 /*

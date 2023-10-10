@@ -5,29 +5,19 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
 
-  private configComponentVisits: number;
-
-  private userName: string;
+  token: string;
 
   constructor() {
-    this.configComponentVisits = 0;
-    this.userName = '';
+    this.token = localStorage.getItem("token")!
   }
 
-  incrementConfigComponentVisits(): void {
-    this.configComponentVisits++;
+  setNewToken(newToken: string): void {
+    localStorage.setItem("token", newToken)
+    this.token = newToken;
   }
 
-  getConfigComponentVisits(): number {
-    return this.configComponentVisits;
-  }
-
-  setUserName(userName: string): void {
-    this.userName = userName;
-  }
-
-  getUserName(): string {
-    return this.userName;
+  getToken(): string {
+    return this.token;
   }
 
 }

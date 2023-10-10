@@ -8,21 +8,20 @@ import {ConfigService} from "../../services/config.service";
 })
 export class ConfigurationComponent implements OnInit {
 
-  userName: string;
+  token: string;
 
   constructor(private configService: ConfigService) {
-    this.userName = this.configService.getUserName();
+    this.token = this.configService.getToken();
   }
 
   ngOnInit(): void {
-    this.configService.incrementConfigComponentVisits();
   }
 
-  getConfigComponentVisits() {
-    return this.configService.getConfigComponentVisits();
-  }
+  setNewToken() {
+    if (this.token == "") {
+      return;
+    }
+    this.configService.setNewToken(this.token)
+    }
 
-  setUserName() {
-    this.configService.setUserName(this.userName);
-  }
 }

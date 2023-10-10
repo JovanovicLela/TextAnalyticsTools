@@ -7,11 +7,6 @@ import {ConfigService} from "../../services/config.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'text-analytics-tools'
 
-  constructor(private configService: ConfigService) {
-  }
-
-  getUserName() {
-    return this.configService.getUserName();
-  }
 }
