@@ -1,4 +1,11 @@
-# Demo2
+# Text Analytics Tools
+
+A web application that enables the client to analyze text with the help of the https://dandelion.eu/ API.\
+The tools offered by Dandelion that are supported:\
+Entity Extraction - a tool that finds key entities in text, such as places, brands, events...\
+Text Similarity - a tool that calculates how semantically similar two texts are.\
+Language Detection - a tool that infers from the entered text what language it is in.\
+Sentiment Analysis - a tool that performs sentimental text analysis.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
